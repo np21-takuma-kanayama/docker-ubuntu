@@ -1,5 +1,6 @@
 FROM ubuntu
 
+RUN sed -i.bak -e "s%http://[^ ]\+%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
     language-pack-ja \
     manpages-ja \
